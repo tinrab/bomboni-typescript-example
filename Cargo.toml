@@ -1,0 +1,19 @@
+[package]
+name = "rust_wasm_typescript"
+version = "0.0.0"
+edition = "2021"
+
+[lib]
+name = "rust_wasm_typescript"
+path = "src/lib.rs"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+bomboni = { version = "0.1.54", features = [
+  "derive",
+  "wasm",
+], default-features = false }
+wasm-bindgen = { version = "0.2.89" }
+js-sys = { version = "0.3.67" }
+serde = { version = "1.0.195", features = ["derive"] }
+rand = "0.8.5"
